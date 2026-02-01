@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -70,6 +71,7 @@ export default function LoginPage() {
             <Button type="submit" className="w-full mt-4">
               Login
             </Button>
+            <p>Don't have a login <Link href="/signup">Sign Up</Link></p>
           </form>
         </CardContent>
       </Card>
