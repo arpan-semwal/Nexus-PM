@@ -63,6 +63,19 @@ export default function Dashboard() {
     }
   };
 
+
+  const handleDeleteTask = async (taskId: string) => {
+    const token = localStorage.getItem("nexus_token");
+    try{
+        await axios.delete(`http://localhost:3001/api/tasks/${taskId}` , {
+            headers: {Authorization: `Bearer ${token}`}
+        });
+        setTasks(tasks.filter((task:any) => task.id !== taskId));
+    }catch(err){
+        console.error("Delete fail ho gaya" , err);
+    }
+  }
+
   const logout = () => {
     localStorage.removeItem("nexus_token");
     router.push("/login");
@@ -110,8 +123,13 @@ export default function Dashboard() {
           tasks.map((task: any) => (
             <div key={task.id} className="p-4 border rounded-lg shadow-sm bg-white hover:border-blue-400 transition-all">
               <h3 className="font-bold text-lg">{task.title}</h3>
-              <p className="text-gray-600">{task.description || "No description provided."}</p>
+              <p className="text-gray-600">{task.description || "No description provided."}</p>\
+
+            <Button variant="destructive" size="sm" onClick={() => handleDeleteTask(task.id)}>
+                Delete
+            </Button>
             </div>
+           
           ))
         ) : (
           <div className="text-center p-20 border-2 border-dashed rounded-xl">
