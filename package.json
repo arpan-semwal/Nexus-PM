@@ -2,7 +2,7 @@
   "name": "my-turborepo",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "npm install --install-links && npx prisma generate --schema=apps/api/prisma/schema.prisma && npx next build apps/api",
     "start": "npx next start apps/api -p 3001",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
