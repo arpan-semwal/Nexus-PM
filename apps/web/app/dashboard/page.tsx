@@ -123,7 +123,7 @@ export default function Dashboard() {
           tasks.map((task: any) => (
             <div key={task.id} className="p-4 border rounded-lg shadow-sm bg-white hover:border-blue-400 transition-all">
               <h3 className="font-bold text-lg">{task.title}</h3>
-              <p className="text-gray-600">{task.description || "No description provided."}</p>\
+              <p className="text-gray-600">{task.description || "No description provided."}</p>
 
             <Button variant="destructive" size="sm" onClick={() => handleDeleteTask(task.id)}>
                 Delete
