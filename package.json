@@ -2,8 +2,8 @@
   "name": "my-turborepo",
   "private": true,
   "scripts": {
-    "build": "npm install --install-links && npx prisma generate --schema=apps/api/prisma/schema.prisma && npx next build apps/api",
-    "start": "npx next start apps/api -p 3001",
+   "build": "turbo run build --filter=api",
+    "start": "npx next start apps/api -p $PORT",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

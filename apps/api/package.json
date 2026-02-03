@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "turbo run build --filter=api...",
-    "railway-build": "npm install && npx prisma generate --schema=apps/api/prisma/schema.prisma && npx next build apps/api",
-    "start": "npx next start apps/api -p 3001",
+    "build": "next build", 
+  "start": "next start -p $PORT",
+  "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
     "lint": "eslint --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
