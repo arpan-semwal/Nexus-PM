@@ -15,7 +15,6 @@
   "dependencies": {
     "@prisma/client": "^6.19.2",
     "prisma": "^6.19.2",
-    "@repo/ui": "*",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^16.0.3",
@@ -27,8 +26,6 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^22.15.3",
