@@ -13,6 +13,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "next": "14.2.5",
     "@prisma/client": "^6.19.2",
     "prisma": "^6.19.2",
     "bcryptjs": "^3.0.3",
