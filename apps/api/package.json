@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
    "dev": "next dev",
-    "build": "turbo run build --filter=api",
-    "start": "next start",
+    "build": "next build",
+    "start": "next start -p $PORT",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "lint": "eslint --max-warnings 0",
