@@ -4,9 +4,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "next build", 
-  "start": "next start -p $PORT",
-  "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+   "dev": "next dev",
+    "build": "turbo run build --filter=api",
+    "start": "next start",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
     "lint": "eslint --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
